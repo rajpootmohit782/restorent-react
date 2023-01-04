@@ -1,9 +1,12 @@
 import React from 'react'
-import classes from '.Cart.module.css'
+import classes from './Cart.module.css'
 import Model from '../UI/Model'
-const Cart = () => {
+const Cart = (props) => {
+  
     const cartItems = <ul className={classes['cart-items']}>{ [{id: 'c1', name:'sushi', amount: 2, price: 12.99 },
 ].map((item) => (<li>{item.name}</li>)) }</ul>
+
+console.log(cartItems)
   return (
     <Model onClose={props.onClose}>
         {cartItems}
